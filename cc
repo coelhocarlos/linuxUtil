@@ -38,3 +38,9 @@ The syntax is:
 $ sudo lsof -i -P -n
 $ sudo lsof -i -P -n | grep LISTEN
 $ doas lsof -i -P -n | grep LISTEN ### [OpenBSD] ###
+
+
+ADD NODE TO CROWJOB
+command which node 
+/root/.nvm/versions/node/v8.10.0/bin/node /var/www/html/v1/socket.js
+
