@@ -46,3 +46,17 @@ command which node
 
 #if no writable sda in /etc/fstab
 mount -n -o remount,rw /dev/sda1 /
+
+
+##############Use apt to uninstall and remove all MySQL packages:#################
+
+$ sudo apt-get remove --purge mysql-server mysql-client mysql-common -y
+$ sudo apt-get autoremove -y
+$ sudo apt-get autoclean
+Remove the MySQL folder:
+
+$ rm -rf /etc/mysql
+Delete all MySQL files on your server:
+
+$ sudo find / -iname 'mysql*' -exec rm -rf {} \;
+##############################################################
