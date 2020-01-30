@@ -44,3 +44,5 @@ ADD NODE TO CROWJOB
 command which node 
 /root/.nvm/versions/node/v8.10.0/bin/node /var/www/html/v1/socket.js
 
+#if no writable sda in /etc/fstab
+mount -n -o remount,rw /dev/sda1 /
