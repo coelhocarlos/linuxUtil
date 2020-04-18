@@ -60,3 +60,7 @@ Delete all MySQL files on your server:
 
 $ sudo find / -iname 'mysql*' -exec rm -rf {} \;
 ##############################################################
+
+owncloud hd 
+/etc/fstab/
+quiet,defaults,permissions,locale=en_US.utf8,noexec
