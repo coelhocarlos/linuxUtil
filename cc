@@ -64,3 +64,13 @@ $ sudo find / -iname 'mysql*' -exec rm -rf {} \;
 owncloud hd 
 /etc/fstab/
 quiet,defaults,permissions,locale=en_US.utf8,noexec
+
+
+##################MYSQL BIND ALL NETWORKS##################################
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+mysqld.cnf
+bind-address           = 0.0.0.0
+# skip-networking
+sudo systemctl restart mysql
+On RedHat based distributions like CentOS to restart the service run:
+sudo systemctl restart mysqld
