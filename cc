@@ -61,9 +61,10 @@ Delete all MySQL files on your server:
 $ sudo find / -iname 'mysql*' -exec rm -rf {} \;
 ##############################################################
 
-owncloud hd 
+owncloud hd laravel hd
 /etc/fstab/
-quiet,defaults,permissions,locale=en_US.utf8,noexec
+quiet,defaults,permissions,locale=en_US.utf8,noexec #Ownlcoud
+auto,user,exec,utf8,uid=1000,gid=1000,rw 0 0 #laravel npm run dev
 
 
 ##################MYSQL BIND ALL NETWORKS##################################
