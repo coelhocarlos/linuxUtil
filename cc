@@ -75,3 +75,9 @@ bind-address           = 0.0.0.0
 sudo systemctl restart mysql
 On RedHat based distributions like CentOS to restart the service run:
 sudo systemctl restart mysqld
+
+
+###########################HARDWARE
+
+sudo lshw
+##########################################
