@@ -1,3 +1,6 @@
+#fomate NTFS
+
+sudo mkfs -t ntfs /dev/sdaX
 
 #criando Atalhos
 ln -s /media/hd-ext/Images/JPG JPG
