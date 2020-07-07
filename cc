@@ -1,3 +1,25 @@
+
+nano /etc/jailkit/jk_init.ini
+and paste the following lines at the end of the file:
+
+[php]
+comment = the php interpreter and libraries
+executables = /usr/bin/php7.2
+directories = /usr/lib/php7.2, /usr/share/php, /usr/share/php7.2, /usr/share/php7.2/fpm , /etc/php/7.2, /usr/share/php-geshi, /usr/share/zoneinfo
+includesections = env
+
+[env]
+comment = environment variables
+executables = /usr/bin/env
+Then run the command:
+
+jk_init -c /etc/jailkit/jk_init.ini -f -k -j /var/www/clients/client1/web1 php
+
+
+
+
+
+
 #fomate NTFS
 
 sudo mkfs -t ntfs /dev/sdaX
