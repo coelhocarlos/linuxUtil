@@ -1,4 +1,6 @@
-
+ispconfig to verify mysql php other
+/usr/local/ispconfig/server/server.sh
+#######################################
 nano /etc/jailkit/jk_init.ini
 and paste the following lines at the end of the file:
 
