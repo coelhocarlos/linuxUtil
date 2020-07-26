@@ -94,7 +94,7 @@ quiet,defaults,permissions,locale=en_US.utf8,noexec #Ownlcoud
 auto,user,exec,utf8,uid=1000,gid=1000,rw 0 0 #laravel npm run dev
 ispconfig user uid=web1 gid=web1
 /dev/sda1 /mnt/usbdrive ntfs-3g  quiet,locale=en_US.utf8,uid=1001,gid=33,dmode=770,fmode=660,comment=systemd.automount 0 0
-
+'check_data_directory_permissions' => false,
 ##################MYSQL BIND ALL NETWORKS##################################
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 mysqld.cnf
