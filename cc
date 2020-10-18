@@ -109,3 +109,12 @@ sudo systemctl restart mysqld
 
 sudo lshw
 ##########################################
+para erros ssl  composer
+php -r "print_r(openssl_get_cert_locations());"
+
+################### JAIL AAPANEL
+cd /tmp/
+wget https://bit.ly/_CHRoot_aaPanel
+chmod +x "_CHRoot_aaPanel"
+./_CHRoot_aaPanel
+
