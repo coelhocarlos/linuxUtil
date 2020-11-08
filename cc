@@ -118,3 +118,10 @@ wget https://bit.ly/_CHRoot_aaPanel
 chmod +x "_CHRoot_aaPanel"
 ./_CHRoot_aaPanel
 
+########################
+Copy image para outra pasta extensao 
+find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec cp '{}' /srv/cloud/photos \; 
+remove image menores que 150 k
+find . -name "*.jpg" -type 'f' -print0  -size -150k -delete
+
+
