@@ -132,3 +132,8 @@ wget -b [URL]
 You may check the download progress by accessing the content of the wget-log file using the tail command as follows:
 
 tail -f wget-log
+
+Download an Entire Directory
+If you’re browsing an FTP server and find an entire folder you’d like to download, just run:
+
+wget -r ftp://example.com/folder
