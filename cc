@@ -124,4 +124,5 @@ find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec cp '{}' /srv/cloud/
 remove image menores que 150 k
 find . -name "*.jpg" -type 'f' -print0  -size -150k -delete
 
-
+##keep process on kill bash shell comand in download using wget
+wget -qbc
