@@ -127,9 +127,12 @@ find . -name "*.jpg" -type 'f' -print0  -size -150k -delete
 #########################
 If you run wget and close the terminal or terminate your ssh session , it will terminate the wget process too. You need to run wget and keep it running even after the session is closed.
 wget -bqc -i --no-check-certificate --auth-no-challenge  list2.txt tee -a wget_log
-wget -bqc -d -o log -i  list1.txt
+wget -bqc -d -o log -i  list.txt
+wget -bqc -d -o log --progress=dot -i list.txt
+wget -bqc -o log2 -i list2.txt
 
 wget --no-check-certificate --auth-no-challenge --http-user=$jen_uname --http-password=$jen_psswd 2>&1 | tee -a wget_log
+
 
 1.7 Continuing the Download Process in the Background
 When downloading a huge file, you may prefer to continue download process in the background and make use of the shell prompt while the file get's downloaded. In this case, you must execute the wget command using option -b option, and monitor the download status in the wget-log file, where the download process will get logged. You need to use the following command to start the download process in the background:
