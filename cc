@@ -124,5 +124,11 @@ find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec cp '{}' /srv/cloud/
 remove image menores que 150 k
 find . -name "*.jpg" -type 'f' -print0  -size -150k -delete
 
-##keep process on kill bash shell comand in download using wget
-wget -qbc
+#########################
+1.7 Continuing the Download Process in the Background
+When downloading a huge file, you may prefer to continue download process in the background and make use of the shell prompt while the file get's downloaded. In this case, you must execute the wget command using option -b option, and monitor the download status in the wget-log file, where the download process will get logged. You need to use the following command to start the download process in the background:
+
+wget -b [URL]
+You may check the download progress by accessing the content of the wget-log file using the tail command as follows:
+
+tail -f wget-log
