@@ -146,3 +146,16 @@ Download an Entire Directory
 If you’re browsing an FTP server and find an entire folder you’d like to download, just run:
 
 wget -r ftp://example.com/folder
+
+
+SAMBA SHARE LINUX PERMANTENT FOLDER 
+apt install samba
+apt install samba-client
+cp /etc/fstab /etc/fstab/old
+mkdir /media/cloud
+sudo nano /home/{USER}/.smcred
+username=???????
+password=???????
+sudo nano /etc/fstab
+//192.168.1.100/cloud /media/cloud cifs uid=1000,gid=1000,credentials=/home/{USER}/.smbcred,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0
+mount -a
