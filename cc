@@ -159,3 +159,9 @@ password=???????
 sudo nano /etc/fstab
 //192.168.1.100/cloud /media/cloud cifs uid=1000,gid=1000,credentials=/home/{USER}/.smbcred,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0
 mount -a
+
+
+speak clock
+
+sudo apt install saytime
+sudo saytime -r 3600
