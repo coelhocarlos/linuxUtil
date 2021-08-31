@@ -188,3 +188,12 @@ date +%I:%M%p | espeak -vla+f4
 Three guesses what this one does:
 
 date +%I:%M%p | espeak -ven+whisper
+
+
+Como executar script ao iniciar Linux (Testado no Ubuntu)
+
+- Com um editor de testo (recomendo Gedit ou VIM), crie seu script e salve-o com extensão .sh na pasta /etc/init.d.
+- No terminal dentro do caminho /etc/init.d, digite o comando: # chmod 755 nome_do_script.sh - Isso dará as permissões necessárias para o arquivo ser executado.
+- Após ter feito isso, utilize o seguinte comando: # update-rc.d nome_do_script.sh defaults - Isso atualizará os diretórios rc.d, adicionando seu script na inicialização do sistema.
+- Caso necessite remover o arquivo da inicialização, utilize o comando: # update-rc.d nome_do_script.sh remove
+Com isso, comandos que você precisa executar toda vez ao iniciar sistema - como compartilhar internet, montar unidade ou iniciar um programa - será executado automaticamente.
