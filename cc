@@ -165,3 +165,26 @@ speak clock
 
 sudo apt install saytime
 sudo saytime -r 3600
+
+sudo apt install speak
+date +%I:%M%p | espeak
+date +%I:%M%p | espeak -vpt
+
+if [ $(date +%M) != "00" ]; then date +%-H:%M%p%Z; else echo -n $(date +%-H); echo -n "oh clock "; date +%p; date +%Z; fi | espeak -ven+f6
+
+
+or in English with a Scottish accent:
+
+date +%I:%M%p | espeak -ven-sc
+
+or in English with a Brummie accent:
+
+date +%I:%M%p | espeak -ven-wm
+
+or in Latin with a female voice:
+
+date +%I:%M%p | espeak -vla+f4
+
+Three guesses what this one does:
+
+date +%I:%M%p | espeak -ven+whisper
