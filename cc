@@ -197,3 +197,10 @@ Como executar script ao iniciar Linux (Testado no Ubuntu)
 - Após ter feito isso, utilize o seguinte comando: # update-rc.d nome_do_script.sh defaults - Isso atualizará os diretórios rc.d, adicionando seu script na inicialização do sistema.
 - Caso necessite remover o arquivo da inicialização, utilize o comando: # update-rc.d nome_do_script.sh remove
 Com isso, comandos que você precisa executar toda vez ao iniciar sistema - como compartilhar internet, montar unidade ou iniciar um programa - será executado automaticamente.
+
+
+# VSFTP OR OTHER FTP
+BIND TO FSTAB TO DIR FTP
+sample = mount --bind /srv/cloud /var/www/public/ftp
+#FSTAB
+/srv/cloud  /var/www/public/ftp    none    bind    0       0
