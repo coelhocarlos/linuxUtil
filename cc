@@ -204,3 +204,9 @@ BIND TO FSTAB TO DIR FTP
 sample = mount --bind /srv/cloud /var/www/public/ftp
 #FSTAB
 /srv/cloud  /var/www/public/ftp    none    bind    0       0
+
+#buscar arquivos com + de 100 MB
+find / -type f -size +100M
+#verificar o que esta cheio em pasta 
+du --max-depth=1 -h /
+df -l
