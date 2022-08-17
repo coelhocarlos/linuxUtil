@@ -210,3 +210,18 @@ find / -type f -size +100M
 #verificar o que esta cheio em pasta 
 du --max-depth=1 -h /
 df -l
+
+################################################################
+OWNCLOUD HD LIBERADO PASTA DATA EXTERNO
+Got it myself!
+
+By default you are not able to set permissions on NTFS formatted drives, but with NTFS-3G you can. Just enable it on mount.
+
+Add permissions to the options in /etc/fstab/. It should look like this:
+UUID=xxxxxxxxx   /home/pi/media    ntfs-3g     defaults,permissions      0       0
+Reboot your Raspberry Pi so that the drive get mounted with permissions.
+sudo shutdown -r now
+Now you are able to set permissions. For owncloud like this:
+sudo chown -R www-data:www-data /home/pi/media/owncloud/data
+################################################################
+
