@@ -228,4 +228,5 @@ sudo chown -R www-data:www-data /home/pi/media/owncloud/data
 PEGAR IP EXTERNO E GRAVAR EM AQRUIVo
 dig @resolver4.opendns.com myip.opendns.com +short '{print $NF\n ; exit}' >> file.txt
 #######################################################################################
-
+LIST SERVICES INSTALLED
+systemctl list-units --type service
